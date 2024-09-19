@@ -4,8 +4,8 @@ const messages = {
       signup: {
         title: "Registrarse",
         toasts: {
-          success: "¡El asistente se creó correctamente! ¡Inicia sesión!",
-          fail: "Error al crear el asistente. Verifique los datos ingresados.",
+          success: "¡El usuario se creó correctamente! ¡Inicia sesión!",
+          fail: "Error al crear el usuario. Verifique los datos ingresados.",
         },
         form: {
           name: "Nombre",
@@ -17,8 +17,8 @@ const messages = {
           login: "¿Ya tienes una cuenta? ¡Inicia sesión!",
         },
       },
-      Login: {
-        title: "Iniciar sesión ahora",
+      login: {
+        title: "Iniciar sesión",
         form: {
           email: "Ingrese correo electrónico",
           password: "Ingrese su contraseña",
@@ -37,12 +37,12 @@ const messages = {
         label: "Variables disponibles",
         vars: {
           contactName: "Nombre",
-          user: "Asistente",
+          user: "Usuario",
           greeting: "Saludo",
           protocolNumber: "Protocolo",
-          date: "Data",
+          date: "Fecha",
           hour: "Hora",
-          ticket_id: "Ticked ID",
+          ticket_id: "ID de Ticket",
           queue: "Sector",
           connection: "Conexión"
         }
@@ -50,7 +50,7 @@ const messages = {
       dashboard: {
         charts: {
           perDay: {
-            title: "Boletos de hoy:",
+            title: "Tickets de hoy:",
           },
         },
         messages: {
@@ -58,10 +58,10 @@ const messages = {
             title: "En asistencia"
           },
           waiting: {
-            title: "Esperando"
+            title: "En espera"
           },
           closed: {
-            title: "Resuelto"
+            title: "Cerrados"
           }
         }
       },
@@ -78,7 +78,8 @@ const messages = {
         },
         buttons: {
           add: "Agregar WhatsApp",
-          disconnect: "desconectar",
+          restart: "Recargar",
+          disconnect: "Desconectar",
           tryAgain: "Intentar de nuevo",
           qrcode: "CÓDIGO QR",
           newQr: "Nuevo CÓDIGO QR",
@@ -131,7 +132,7 @@ const messages = {
         success: "WhatsApp se guardó correctamente.",
       },
       qrCode: {
-        message: "Lee el QRCode para iniciar sesión",
+        message: "Lee el código QR para iniciar sesión",
       },
       contacts: {
         title: "Contactos",
@@ -248,7 +249,7 @@ const messages = {
         },
         form: {
           name: "Nombre",
-          color: "Mensaje de saludo",
+          color: "Color",
           greetingMessage: "Apertura",
           startWork: "Apertura",
           endWork: "Cierre",
@@ -262,8 +263,8 @@ const messages = {
       },
       userModal: {
         title: {
-          add: "Agregar asistente",
-          edit: "Editar asistente",
+          add: "Agregar usuario",
+          edit: "Editar usuario",
         },
         form: {
           name: "Nombre",
@@ -272,9 +273,9 @@ const messages = {
           profile: "Perfil",
           admin: "Administrador",
           whatsapp: "Conexión estándar",
-          asistente: "Asistente",
-          startWork: "Inicio",
-          endWork: "Finalizar",
+          asistente: "Usuario",
+          startWork: "Entrada",
+          endWork: "Salida",
           isTricked: "Ver contactos",
           enabled: "Habilitado",
           disabled: "Deshabilitado"
@@ -284,14 +285,14 @@ const messages = {
           okEdit: "Guardar",
           cancel: "Cancelar",
         },
-        success: "El asistente guardó con éxito.",
+        success: "El usuario se guardó con éxito.",
       },
       chat: {
         noTicketMessage: "Seleccione un ticket para comenzar a chatear.",
       },
       uploads: {
         titles: {
-          titleUploadMsgDragDrop: "⬇️ ARRASTRA Y SOLTA LOS ARCHIVOS EN EL CAMPO DEBAJO ⬇️",
+          titleUploadMsgDragDrop: "⬇️ ARRASTRA Y SUELTA LOS ARCHIVOS EN EL CAMPO DE DEBAJO ⬇️",
           titleFileList: "Lista de archivos"
         },
       },
@@ -308,11 +309,11 @@ const messages = {
           deleted: "El ticket en el que estabas ha sido eliminado.",
         },
         notification: {
-          message: "Mensaje de",
+          message: "Mensaje de ",
         },
         tabs: {
           open: { title: "Bandeja de entrada" },
-          closed: { title: "Resuelto" },
+          closed: { title: "Cerrado" },
           search: { title: "Buscar" },
         },
         search: {
@@ -323,12 +324,12 @@ const messages = {
         },
       },
       transferTicketModal: {
-        title: "Boleto de transferencia",
-        fieldLabel: "Escriba para obtener asistentes",
+        title: "Transferencia de Ticket",
+        fieldLabel: "Escriba para obtener usuarios",
         fieldConnectionLabel: "Transferir a conexión",
         fieldQueueLabel: "Transferir a Sector",
         fieldConnectionPlaceholder: "Seleccione una conexión",
-        noOptions: "No se encontró ningún asistente con ese nombre",
+        noOptions: "No se encontró ningún usuario con ese nombre",
         buttons: {
           ok: "Transferir",
           cancel: "Cancelar",
@@ -343,19 +344,19 @@ const messages = {
         items: {
           queueless: "Sin sector",
           accept: "Aceptar",
-          spy: "Espía",
-          close: "Cerca",
+          spy: "Espiar",
+          close: "Cerrar",
           reopen: "Reabrir",
           return: "Mover a espera",
           connection: "Conexión",
-          user: "Asistente",
+          user: "Usuario",
           queue: "Sector",
           tags: "Etiquetas"
         },
         buttons: {
           accept: "Responder",
           acceptBeforeBot: "Aceptar",
-          start: "empezar",
+          start: "Empezar",
           cancel: "Cancelar"
         },
         acceptModal: {
@@ -386,21 +387,22 @@ const messages = {
         listItems: {
           dashboard: "Tablero",
           connections: "Conexiones",
-          tickets: "Boletos",
+          tickets: "Tickets",
           contacts: "Contactos",
           quickAnswers: "Respuestas rápidas",
           etiquetas: "Etiquetas",
           queues: "Sectores",
           administration: "Administración",
-          users: "Asistentes",
+          users: "Usuarios",
           settings: "Configuración",
           sendMsg: "Enviando Mensajes",
+          integrations: "Integraciones",
           sendMedia: "Enviando medios",
           api: "Uso de la API",
           apidocs: "Documentación",
           apititle: "API",
           apikey: "Clave API",
-          token: "Ficha"
+          token: "Token"
         },
         appBar: {
           message: {
@@ -450,7 +452,8 @@ const messages = {
         },
         buttons: {
           add: "Agregar respuesta rápida",
-          deletedAll: "Eliminar todas las respuestas rápidas",
+          deleteAll: "Eliminar todas las respuestas rápidas",
+          
         },
         toasts: {
           deleted: "Respuesta rápida eliminada con éxito.",
@@ -465,7 +468,7 @@ const messages = {
         },
       },
       users: {
-        title: "Asistentes",
+        title: "Usuarios",
         table: {
           id: "ID",
           name: "Nombre",
@@ -473,20 +476,20 @@ const messages = {
           profile: "Perfil",
           tricked: "Ver contactos",
           whatsapp: "Conexión estándar",
-          startWork: "Hora de inicio",
-          endWork: "Tiempo de finalización",
-          acciones: "Acciones",
+          startWork: "Hora de entrada",
+          endWork: "Hora de salida",
+          actions: "Acciones",
         },
         buttons: {
-          add: "Agregar asistente",
+          add: "Agregar usuario",
         },
         toasts: {
-          deleted: "Asistente eliminado con éxito.",
-          updated: "Asistente actualizado con éxito."
+          deleted: "Usuario eliminado con éxito.",
+          updated: "Usuario actualizado con éxito."
         },
         confirmationModal: {
-          deleteTitle: "Eliminar",
-          deleteMessage: "Se perderán todos los datos del asistente. Los tickets abiertos para este asistente se moverán a espera.",
+          deleteTitle: "Eliminar usuario de ",
+          deleteMessage: "Se perderán todos los datos del usuario. Los tickets abiertos para este usuario se moverán a espera.",
         },
       },
       company:{
@@ -516,8 +519,8 @@ const messages = {
         title: "Configuración",
         settings: {
           userCreation: {
-            name: "Creación de asistente",
-            note: "Permitir la creación de asistentes",
+            name: "Creación de usuario",
+            note: "Permitir la creación de usuarios",
             options: {
               enabled: "Habilitado",
               disabled: "Deshabilitado",
@@ -525,7 +528,7 @@ const messages = {
           },
           allTicket: {
             name: "Todo el mundo puede ver el ticket sin departamento",
-            note: "Active esta función para que todos los usuarios vean los boletos sin sector",
+            note: "Active esta función para que todos los usuarios vean los tickets sin sector",
             options: {
               enabled: "Habilitado",
               disabled: "Deshabilitado",
@@ -551,7 +554,7 @@ const messages = {
             name: "Menú lateral de inicio",
             note: "Si está habilitado, el menú lateral comenzará cerrado",
             options: {
-              enabled: "Abrir",
+              enabled: "Abierto",
               disabled: "Cerrado",
             },
           },
@@ -580,8 +583,8 @@ const messages = {
             },
           },
           created: {
-            name: "Orden de entradas (createdAt or updateAt)",
-            note: "Cuando se activa, se ordenará por fecha de creación (createdAt), al desactivar se ordenará por fecha de actualización (updateAt)",
+            name: "Orden de entradas (Creado a o actualizado a)",
+            note: "Cuando se activa, se ordenará por fecha de creación (creado a), al desactivar se ordenará por fecha de actualización (actualizado a)",
             options: {
               enabled: "Habilitado",
               disabled: "Deshabilitado",
@@ -665,7 +668,7 @@ const messages = {
       backendErrors: {
         ERR_NO_OTHER_WHATSAPP: "Debe haber al menos un WhatsApp predeterminado.",
         ERR_NO_DEF_WAPP_FOUND: "No se encontró WhatsApp predeterminado. Verifique la página de conexiones.",
-        ERR_WAPP_NOT_INITIALIZED: "Esta sesión de WhatsApp no ​​fue inicializada. Por favor revisa la página de conexiones.",
+        ERR_WAPP_NOT_INITIALIZED: "Esta sesión de WhatsApp no fue inicializada. Por favor revisa la página de conexiones.",
         ERR_WAPP_CHECK_CONTACT: "No se pudo verificar el contacto de WhatsApp. Verifique la página de conexiones.",
         ERR_WAPP_INVALID_CONTACT: "Este no es un número de Whatsapp válido.",
         ERR_WAPP_DOWNLOAD_MEDIA: "No se pueden descargar medios de WhatsApp. Verifique la página de conexiones",
@@ -674,20 +677,20 @@ const messages = {
         ERR_DELETE_WAPP_MSG: "No se pudo eliminar el mensaje de WhatsApp.",
         ERR_OTHER_OPEN_TICKET: "Ya hay un ticket abierto para este contacto.",
         ERR_SESSION_EXPIRED: "Sesión caducada. Inicie sesión.",
-        ERR_USER_CREATION_DISABLED: "La creación de asistentes ha sido deshabilitada por el administrador.",
+        ERR_USER_CREATION_DISABLED: "La creación de usuarios ha sido deshabilitada por el administrador.",
         ERR_NO_PERMISSION: "No tienes permiso para acceder a este recurso.",
         ERR_DUPLICATED_CONTACT: "Ya existe un contacto con este número.",
         ERR_NO_SETTING_FOUND: "No se encontraron configuraciones con esta ID.",
         ERR_NO_CONTACT_FOUND: "No se encontró ningún contacto con esta ID.",
         ERR_NO_TICKET_FOUND: "No se encontraron boletos con esta ID.",
-        ERR_NO_USER_FOUND: "No se encontró ningún asistente con esta ID.",
+        ERR_NO_USER_FOUND: "No se encontró ningún usuario con esta ID.",
         ERR_NO_WAPP_FOUND: "No se encontró WhatsApp con este ID.",
         ERR_CREATING_MESSAGE: "Error al crear el mensaje en la base de datos.",
         ERR_CREATING_TICKET: "Error al crear el ticket en la base de datos.",
         ERR_FETCH_WAPP_MSG: "Error al obtener el mensaje en WhatsApp, puede ser demasiado antiguo.",
         ERR_QUEUE_COLOR_ALREADY_EXISTS: "Este color ya está en uso, elige otro.",
         ERR_WAPP_GREETING_REQUIRED: "El mensaje de saludo es obligatorio cuando hay más de un Sector.",
-        ERR_USER_CREATION_COUNT: "Límite de asistentes alcanzado, comuníquese con soporte para cambiar",
+        ERR_USER_CREATION_COUNT: "Límite de usuarios alcanzado, comuníquese con soporte para cambiar",
         ERR_CONNECTION_CREATION_COUNT: "Límite de conexión alcanzado, comuníquese con soporte para cambiar.",
         ERR_NO_TAG_FOUND: "Etiqueta no encontrada.",
         ERR_OPEN_USER_TICKET: "Ya existe un ticket para este contacto con ",
